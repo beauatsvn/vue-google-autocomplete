@@ -1,16 +1,14 @@
 <template>
-    <input
+    <v-text-field
         ref="autocomplete"
-        type="text"
         :class="classname"
         :id="id"
-        :placeholder="placeholder"
+        :label="placeholder"
         v-model="autocompleteText"
         @focus="onFocus()"
         @blur="onBlur()"
         @change="onChange"
-        @keypress="onKeyPress"
-        @keyup="onKeyUp"
+        @keydown="onKeyPress"
     />
 </template>
 
